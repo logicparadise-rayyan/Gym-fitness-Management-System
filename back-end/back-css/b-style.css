@@ -1,0 +1,328 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: auto;
+}
+
+.text-centre{
+    text-align: center;
+}
+.clearfix{
+    float: none;
+    clear: both;
+}
+.tbl-full{
+    width: 100%;
+}
+.tbl-30{
+    width: 30%;
+}
+
+.input-design{
+    background-color: #2a2a2ab7;
+    color: #f5d10d;
+    padding: 1%;
+    border-radius: 5px;
+    border: none;
+}
+
+.tbl-30 tr td input::placeholder{
+    color: #f5d10d;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+table tr th{
+    border-bottom: 1px solid black;
+    padding: 2%;
+    text-align: left;
+}
+
+
+table tr td{
+    padding: 1%;
+}
+
+.btn-primary{
+    background-color:#f5980dd0;
+    color: black;
+    padding: 1%;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-primary:hover{
+    background-color:#ff8800;
+    padding: 1%;
+}
+
+.btn-secondary{
+    background-color:#7bed9f;
+    color: black;
+    padding: 1%;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-secondary:hover{
+    background-color:#2ed573;
+   
+}
+
+.btn-danger{
+    background-color:#ff6b81;
+    color: black;
+    padding: 1%;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-danger:hover{
+    background-color:#ff4757;
+   
+}
+
+.success{
+    color: #008a39;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+.error{
+    color: #910511;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+/*CSS menu start*/
+.menu{
+    background-color: #2A2A2A;
+}
+.menu ul{
+    list-style-type: none;
+}
+
+.menu ul li{
+    display: inline;
+    padding: 1%;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: #f5d10d;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.menu ul li a:hover{
+  border-bottom: 1px solid #f5d10d;
+}
+
+
+/*CSS menu end*/
+
+/*CSS main content start*/
+.main-content{
+    padding: 3% 0;
+    background-color: #f5d10d;
+
+}
+
+.col-4{
+    width: 20%;
+    padding: 1%;
+    margin: 2%;
+    background-color: #f5980dd0;
+    float: left;
+}
+
+
+/*CSS main content end*/
+
+
+
+/*login page css starts*/
+
+.screen{
+    display: flex;
+   margin-left: 70px;
+}
+
+.mobile{
+    width: 500px;
+    height: 600px;
+    margin-top: 50px;
+    position: relative;
+}
+.username input :hover , .password input :hover{
+    border: 1px solid black;
+}
+
+ 
+
+.log_in{
+    margin-top: 50px;
+   
+}
+
+
+input{
+    background-color: #f5d10d;
+    border: none;
+    outline: none;
+
+}
+
+.info .password input , .info .username input{
+    font-size: larger;
+    margin-left: 35%;
+    margin-top: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 50px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+     margin-left: 50px;
+     margin-bottom: 10px;
+     text-align: center;
+}
+
+.info .password input::placeholder , .info .username  input::placeholder{
+    color: black;
+    
+}
+ 
+.info input:hover{
+    background-color: #ff9900;
+    border: 2px solid black;
+}
+.iphone{
+    width: 700px; 
+    height: 600px;
+}
+.container{
+    background: linear-gradient(to right, rgb(245, 209, 13), rgb(42, 42, 42));
+}
+
+
+  .logo {
+    padding-top: 20px;
+    width: 200px;
+    height: 120px;
+    margin-left: 103px;
+}
+
+.log_in{
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    background-color: #f5d10d;
+    border: 1px solid black; 
+    text-align: center;
+    font-size: large;
+    font-weight: 400;
+    color: #2A2A2A;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+
+.log_in:hover{
+    background-color: #ff9900;
+    border: 2px solid black;
+}
+.login_page{
+    background: linear-gradient(to right, rgb(42, 42, 42), rgb(245, 209, 13));;
+   border-radius:10px;
+   border:1px solid black;
+   margin-left: 200px;
+   margin-top: 90px;
+   width: 400px;
+   height: 500px;
+}
+
+.position{
+    position: absolute;
+}
+.feed{
+    margin-left: 196px;
+    width: 290px;
+    margin-top: 28px;
+    height: 542px;
+    border-radius: 27px;
+    border: 2px solid white;
+}
+
+.cake{
+    margin-left: 196px;
+    width: 290px;
+    margin-top: 28px;
+    height: 542px;
+    border-radius: 27px;
+    border: 2px solid white;
+    display: none;
+}
+
+.click-me{
+    margin-left: 240px;
+    margin-top: 500px;
+    z-index: 1;
+    color: #ffffffc2;
+    font-family: cursive;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.username input  [placeholder]{
+    color:black;
+}
+
+/*login page css ends*/
+/*preview for image starts*/
+.image-preview{
+    width: 300px;
+    min-height: 100px;
+    border: 2px solid black;
+    margin-top: 15px;
+    background-color: lightgray;
+
+    /*Default text*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #2A2A2A;
+}
+
+.image-preview__image{
+    display: none;
+    background-color: none;
+    width: 100%;
+}
+
+
+
+
+
+
+/*preview for image starts*/
+/*CSS footer start*/
+.footer{
+    background-color:#2A2A2A ;
+    color: #f5d10d;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+/*CSS footer end*/
