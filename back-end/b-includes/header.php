@@ -17,9 +17,8 @@ include('../admin/login-checker.php');
                  <li><a href="../admin/index.php">Home</a></li>
                  <li><a href="../admin/admin-manager.php">Admin</a></li>
                  <li><a href="../admin/manage-fc.php">Fitness-content</a></li>
-                 <li><a href="../admin/manage-workout.php">workout</a></li>
-                 <li><a href="../admin/manage-slider.php">Slider</a></li>
-                 <li><a href="../admin/manage-testimonial.php">Testimonial</a></li>
+                 <li><a href="../admin/workout.php">workout</a></li>
+                 <li><a href="#">Gallery</a></li>
                  <li><a href="../admin/logout.php">Logout</a></li>
              </ul>
            </div>

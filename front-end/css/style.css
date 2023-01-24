@@ -178,8 +178,6 @@
 .circle-post a{
     text-decoration: none;
 }
-
-
 /********************STYLING FOR SCROLL BAR START*********************/
 .div-post{
     display: flex;
@@ -211,14 +209,14 @@
     border: 1px solid #F5D10D;
 }
 .card-image img{
-    width: 348px;
-    height: 470px;
+    width: 100%;
+    height: 100%;
     margin-top: 10px;
     border-radius: 5px;
     border: 1px solid #f5d10d;
 }
 .cards h3{
-text-align: center;
+margin-left:70px ;
 }
 .cards p{
     color: #F5D10D;
@@ -305,37 +303,6 @@ text-align: center;
 .second-carousel{
     padding-top: 30px;
 }
-
-#testimonial{
-    margin-bottom: 30px;
-    margin-top: -120px;
-    
-}
-
-.success{
-    color: #008a39;
-    font-weight: bolder;
-    letter-spacing: 1px;
-}
-
-.error{
-    color: #910511;
-    font-weight: bolder;
-    letter-spacing: 1px;
-}
-
-.text-centre{
-    text-align: center;
-}
-
-.feedback-testimonial .testimonials{
-   text-align: center;
-    letter-spacing: 7px;
-    padding-bottom: 100px;
-    font-size: 20px;
-    font-weight: lighter;
-
-}
 /********************STYLING FOR CLIENT REVIEW END*********************/
 /********************VIDEO START*********************/
 #video-player{
@@ -355,7 +322,7 @@ text-align: center;
 .join-us h3{
     color: rgba(0, 0, 0, 0.95);
     text-align: center;
-    padding: 25px;
+    padding: 34px;
     background-color: #F5D10D;
     opacity: .8;
     height: 100px;

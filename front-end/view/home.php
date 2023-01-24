@@ -7,141 +7,81 @@ include_once "../includes/header.php";
 <!---------------------------------CAROUSEL START ------------------------------------->
 <div class="texter">
     <div id="slider-one" class="owl-carousel owl-theme">
-        <?php 
-            $sql="SELECT * FROM  tbl_slider"; 
-            
-            //3. execute query and data into database
-            $res = mysqli_query($conn,$sql) or die(mysqli_error());
-
-                //4. to check wheathet the user exists or not
-                $count = mysqli_num_rows($res);
-
-                    //check whether the quer is executed or not
-                    //check the number of rows
-                if($count>0)
-                   {
-                        //we have data in Db
-                        while($rows = mysqli_fetch_assoc($res))
-                        {
-                        
-                            //using while loop to display all the data from database
-                            $id = $rows['id'];
-                            $slider_head = $rows['slider_head'];
-                            $slider_image = $rows['slider_image'];
-                            $slider_paragraph = $rows['slider_paragraph'];
-                            ?>
-
-                               <div class="item owl-carousal">
-                                    <?php
-                                    
-                                    if($slider_image=="")
-                                    {
-                                        echo "<div class='error'>image not available</div>";
-
-                                    }else{
-
-                                        ?>
-                                              <img src="<?php echo SITEURL; ?>../../back-end/b-images/slider-images/<?php echo $slider_image;?>">
-                                        <?php
+        <div class="item owl-carousal">
+            <img src="../images/rope.jpg">
+            <div class="text">
+                <h1>U FAT SHIT</h1>
+                <P>Loose All Your Fat IN No Time</P>
+            </div>
+        </div>
 
 
-                                    }
-                                    ?>
-                                    <div class="text">
-                                        <h1><?php echo $slider_head; ?></h1>
-                                        <P><?php echo $slider_paragraph; ?></P>
-                                    </div>
-                                </div>
+        <div class="item owl-carousal">
+            <img src="../images/only-men-rope.jpg">
+            <div class="text">
+                <h1>U FAT SHIT</h1>
+                <P>Loose All Your Fat IN No Time</P>
+            </div>
+        </div>
 
-                            <?php
-                        }
 
-                    }
-                    else
-                    {
-                        echo "<div class='error'>no image for slider found</div>";
-                    }
-                ?>
-                
+        <div class="item owl-carousal">
+            <img src="../images/with-trainer.jpg">
+            <div class="text">
+                <h1>U FAT SHIT</h1>
+                <P>Loose All Your Fat IN No Time</P>
+            </div>
+        </div>
+
+
+        <div class="item owl-carousal">
+            <img src="../images/heavy-squat-men.jpg">
+            <div class="text">
+                <h1>U FAT SHIT</h1>
+                <P>Loose All Your Fat IN No Time</P>
+            </div>
+        </div>
     </div>
     <!--------------------------- CAROUSEL END------------------------------------->
     <!-----------------------------POST START------------------------------------->
 
-   
-
-    <?php 
-            $sql="SELECT * FROM  tbl_post"; 
-            
-            //3. execute query and data into database
-            $res = mysqli_query($conn,$sql) or die(mysqli_error());
-
-                //4. to check wheathet the user exists or not
-                $count = mysqli_num_rows($res);
-
-                    //check whether the quer is executed or not
-                    //check the number of rows
-                if($count>0)
-                   {
-                        //we have data in Db
-                        while($rows = mysqli_fetch_assoc($res))
-                        {
-                        
-                            //using while loop to display all the data from database
-                            $id = $rows['id'];
-                            $title = $rows['title'];
-                            $image_name = $rows['image_name'];
-                            $content = $rows['content'];
-                            ?>
-                                
-                            <div class="post">
-                                <div class="caption">
-
-                                    <h1><?php echo $title; ?></h1>
-                                    <p><?php echo $content; ?></p>
+    <div class="post">
+        <div class="caption">
+            <h1>This is a Post</h1>
+            <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                blanditiis praesentium voluptatum deleniti atque<br><br> corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                "At vero eos et accusamus et iusto odio dignissimos </p>
 
 
-                                </div>
-
-                                <div class="picture">
-                                    <?php
-                                                                
-                                            if($image_name=="")
-                                            {
-                                                echo "<div class='error'>image not available</div>";
-
-                                            }else{
-
-                                                ?>
-                                                        <img src="<?php echo SITEURL; ?>../../back-end/b-images/post-images/<?php echo $image_name;?>">
-                                                <?php
-
-
-                                            }
-                                        ?>
-                                </div>
-                                
-                            </div>
-
-                            <?php
-                        }
-
-                    }
-                    else
-                    {
-                        echo "<div class='error'>no image for slider found</div>";
-                    }
-     ?>
+        </div>
+        <div class="picture">
+            <img src="../images/bicep-curl-men.jpg">
+        </div>
+    </div>
+    <div class="post ">
+        <div class="picture second-pic">
+            <img src="../images/man-jump-ball.jpg">
+        </div>
+        <div class="caption second-para">
+            <h1>This is a Post</h1>
+            <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                "At vero eos et accusamus et iusto odio dignissimos
+                <br>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                "At vero eos et accusamus et iusto odio dignissimos </p>
+        </div>
+    </div>
 </div>
-
-
 <div class="circle-post">
-    <h1>Latest workout/Meal plans</h1>
+    <h1>Latest workout plans</h1>
     <div class="div-post">
 
         <a href="#"> <div class="circle-image"><img src="../images/push-up.jpg"></div>
             <h3>text for circle</h3>
 
-        <a href="#"> <div class="circle-image"><img src="../images/push-up.jpg"></div>
+            <a href="#"> <div class="circle-image"><img src="../images/push-up.jpg"></div>
                 <h3>text for circle</h3></a>
 
         <a href="#"> <div class="circle-image"><img src="../images/push-up.jpg"></div>
@@ -157,153 +97,60 @@ include_once "../includes/header.php";
             <h3>text for circle</h3></a>
     </div>
     <!-----------------------------POST END------------------------------------->
-
-
     <!-----------------------------CARD START------------------------------------->
     <div id="fitness-content"><h1 >FITNESS CONTENT</h1></div>
+
     <div class="main-div-cards">
-            <?php 
-                    $sql="SELECT * FROM  fitness_content"; 
-                    
-                    //3. execute query and data into database
-                    $res = mysqli_query($conn,$sql) or die(mysqli_error());
+        <?php
+        $i=0;
+        while ($i<5){
+        $i++;
+        ?>
 
-                        //4. to check wheathet the user exists or not
-                        $count = mysqli_num_rows($res);
-
-                            //check whether the quer is executed or not
-                            //check the number of rows
-                        if($count>0)
-                        {
-                                //we have data in Db
-                                while($rows = mysqli_fetch_assoc($res))
-                                {
-                                
-                                    //using while loop to display all the data from database
-                                    $id = $rows['id'];
-                                    $fc_heading = $rows['fc_heading'];
-                                    $fc_image_name = $rows['fc_img_name'];
-                                    $fc_paragraph = $rows['fc_paragraph'];
-                                
-                        ?>
+        <div class="cards">
+            <h3>this is heading</h3>
+            <div class="card-image"><img src="../images/heavy-squat-men.jpg"></div>
+            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium volupt<br>atum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                blanditiis praesentium voluptatum deleniti atque</p>
+            <a href="">View More</a>
+        </div>
 
 
-                                <div class="cards">
-                                    <h3><?php echo $fc_heading; ?></h3>
-
-                                            <?php
-                                                
-                                                if($fc_image_name=="")
-                                                {
-                                                    echo "<div class='error'>image not available</div>";
-
-                                                }else{
-
-                                            ?>
-                                                <div class="card-image"> <img src="<?php echo SITEURL; ?>../../back-end/b-images/fc-images/<?php echo $fc_image_name;?>"></div>
-                                            <?php
-
-
-                                                }
-                                            ?>
-                                
-                                                <p><?php echo $fc_paragraph; ?></p>
-                                                <a href="">View More</a>
-                                </div>
-                                    
-
-                        <?php
-                                }
-
-                            }
-                            else
-                            {
-                                echo "<div class='error'>no image for slider found</div>";
-                            }
-                        ?>
+            <?php
+        }
+        ?>
     </div>
-     
     <!-----------------------------CARD END------------------------------------->
-
-
     <!-----------------------------CLIENT TESTIMONIAL START------------------------------------->
     <div class="testimonial-container">
         <div class="client-testimonial"><h1>CLIENT TESTIMONIAL</h1></div>
         <div  id="slider-two" class="owl-carousel second-carousel ">
-
-
-                <?php 
-                    $sql="SELECT * FROM  tbl_testimonial"; 
-                    
-                    //3. execute query and data into database
-                    $res = mysqli_query($conn,$sql) or die(mysqli_error());
-
-                        //4. to check wheathet the user exists or not
-                        $count = mysqli_num_rows($res);
-
-                            //check whether the quer is executed or not
-                            //check the number of rows
-                        if($count>0)
-                        {
-                                //we have data in Db
-                                while($rows = mysqli_fetch_assoc($res))
-                                {
-                                
-                                    //using while loop to display all the data from database
-                                    $id = $rows['id'];
-                                    $testimonial_profile = $rows['testimonial_profile'];
-                                    $testimonial_head = $rows['testimonial_head'];
-                                    $testimonial_para = $rows['testimonial_para'];
-                                    ?>
-
-                                    <div class="content-area">
-                                        <div class="content">
-
-                                            <?php
-                                                if($testimonial_profile=="")
-                                                {
-                                                    echo "<div class='error'>image not available</div>";
-
-                                                }else{
-
-                                                    ?>
-                                                        <div class="image-area"><img src="<?php echo SITEURL; ?>../../back-end/b-images/testimonial-images/<?php echo $testimonial_profile;?>"></div>
-                                                    <?php
-
-
-                                                }
-                                                ?>
-
-                                                <h1><?php echo $testimonial_head; ?></h1>
-                                                <p><?php echo $testimonial_para; ?></p>
-                                        </div>        
-                                     </div>
-
-                        <?php
-
-                                }
-
-                            }
-                            else
-                            {
-                                echo "<div class='error'>no image for testimonial found</div>";
-                            }
-                        ?>
-        </div>                
-   </div>
-
-        <a  href="<?php echo SITEURL;?>../../back-end/manage-content/add-testimonial.php"> <div class="join-us" id = "testimonial"><h3>ADD TESTIMONIAL</h3></div></a>
-     
-            <div class = " feedback-testimonial">
-                <?php
-                
-                    if(isset($_SESSION['add-testimonial'])){
-                        echo $_SESSION['add-testimonial'];//displaying session message
-                        unset($_SESSION['add-testimonial']);//removing session message
-                    }
-                    
-                ?>
+            <div class="content-area">
+                <div class="content">
+                    <div class="image-area"><img src="../images/potrait-1.jpg"> </div>
+                    <h1>some famous</h1>
+                    <p>"In my opinion this is the best gym ihave seen so far"</p>
+                </div>
             </div>
+
+            <div class="content-area">
+                <div class="content">
+                    <div class="image-area"><img src="../images/potrait-2.jpg"> </div>
+                    <h1>some famous</h1>
+                  <p>"In my opinion this is the best gym ihave seen so far"</p>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="content">
+                    <div class="image-area"><img src="../images/potrait-3.jpg"> </div>
+                    <h1>some famous</h1>
+                    <p>"In my opinion this is the best gym ihave seen so far"<br></p>
+                </div>
+            </div>
+
+
+        </div>
             <!-----------------------------CLIENT TESTIMONIAL END------------------------------------->
             <!-----------------------------VIDEO START------------------------------------->
         <iframe id="video-player"

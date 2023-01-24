@@ -7,10 +7,5 @@
         </div>
         <!--footer section ends -->
         
-
-        <!--image preview starts-->
-    <script src="../b-javascript/image-preview.js"></script>
-
-        <!--image preview ends-->
     </body>
 </html>

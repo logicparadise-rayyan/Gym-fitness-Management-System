@@ -1,9 +1,3 @@
-<?php 
-
-include('../../back-end/db_connection/db_connection.php');
-
-?>
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,11 +22,11 @@ include('../../back-end/db_connection/db_connection.php');
             <nav>
                 <div class="navigation">
                     <div class="menu" style="text-align: center;">
-                        <a href="<?php echo SITEURL;?>">Home</a>
-                        <a href="<?php echo SITEURL;?>about.php" >about</a>
-                        <a href="<?php echo SITEURL;?>workout.php ">workout</a>
+                        <a href="../view/home.php">Home</a>
+                        <a href="../view/about.php">about</a>
+                        <a href="#">workout</a>
                         <a href="#">client</a>
-                        <a href="<?php echo SITEURL;?>contact.php">contact</a>
+                        <a href="../view/contact.php">contact</a>
                     </div>
                     <div class="icon">
                         <img src="../images/main-logo.png" >

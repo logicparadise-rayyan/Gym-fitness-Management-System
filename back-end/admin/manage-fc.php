@@ -60,6 +60,8 @@ include_once "../b-includes/header.php";
        <th>Heading</th>
        <th>image name</th>
        <th>paragraph</th>
+       <th>featured</th>
+       <th>active</th>
    </tr>
 
 
@@ -83,6 +85,8 @@ include_once "../b-includes/header.php";
             $id = $rows['id'];
             $fc_image_name = $rows['fc_img_name'];
             $fc_heading = $rows['fc_heading'];
+            $fc_active = $rows['fc_active'];
+            $fc_featured = $rows['fc_featured'];
             $fc_paragraph = $rows['fc_paragraph'];
 
                 ?>
@@ -110,8 +114,10 @@ include_once "../b-includes/header.php";
                     ?></td>
                     
                     <td><?php echo $fc_paragraph; ?></td>
+                    <td><?php echo $fc_featured; ?></td>
+                    <td><?php echo $fc_active; ?></td>
                     <td>
-                        <a href="<?php echo SITEURL?>../../back-end/manage-content/update-fc.php?id=<?php echo $id; ?>&fc_current_image_name=<?php echo  $fc_image_name; ?>" class="btn-secondary">Update content</a>
+                        <a href="<?php echo SITEURL?>../../back-end/manage-content/update-fc.php?id=<?php echo $id; ?>&fc_image_name=<?php echo  $fc_image_name; ?>" class="btn-secondary">Update content</a>
                         <a href="<?php echo SITEURL?>../../back-end/manage-content/delete-fc.php?id=<?php echo $id; ?>&fc_image_name=<?php echo  $fc_image_name; ?>" class="btn-danger">Delete content</a>
                     </td>
                 </tr>

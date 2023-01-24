@@ -5,7 +5,7 @@ include('../b-includes/header.php');
 <div class="main-content">
            <div class="wrapper">
              <h1>ADD FITNESS CONTENT</h1><br><br><br>
-           
+           </div>
 
            <?php
 
@@ -21,56 +21,61 @@ include('../b-includes/header.php');
            ?>
 
 
-                <form action="" method="POST" enctype="multipart/form-data">
+           <form action="" method="POST" enctype="multipart/form-data">
 
-                <table class="">
+        <table class="">
 
-                <tr>
-                    <td>Heading:</td>
-                    <td><input class="input-design" type="text" name="fc_heading" placeholder="Heading"></td>
-                </tr>
+        <tr>
+            <td>Heading:</td>
+            <td><input class="input-design" type="text" name="fc_heading" placeholder="Heading"></td>
+        </tr>
 
-                
-
-                <tr>
-                    <td>Select Image:</td>
-                    <td>
-                        
-                        <div class="image-preview" id="imagePreview">
-                            <img src="" alt="image preview" class="image-preview__image">
-                            <span  class="image-preview__default-text">image preview<br>475 X 650</span>
-                        </div>
-                        <br>
-                        <input type="file" name="fc_image_name" id="inpFile">
-                        <br><br><br>
-
-                    </td>
-                </tr>
-
-
-
-                <tr>
-                
-                    <td>
-                    <label>Fitness content:</label>
-                    <td><textarea name="fc_paragraph" rows="10" cols = "50"></textarea></td>
-                    </td>
-                    
-                </tr>
-
-                <tr>
-                    <td colspan="2">
-                        <input type="submit" name="submit" value="Update Content" class="btn-secondary">
-                    </td>
-                    
-                </tr>
-
-            </table>
-        </form>
         
-    </div>
+        <tr>
+            <td>Select Image:</td>
+            <td>
+                <input type="file" name="fc_image_name">
+            </td>
+            
+        </tr>
 
-</div>
+
+        <tr>
+          
+            <td>
+            <label>Fitness content:</label>
+            <td><textarea name="fc_paragraph" rows="10" cols = "50"></textarea></td>
+            </td>
+            
+        </tr>
+
+
+        <tr>
+            <td>featured:</td>
+            <td>
+                <input  type="radio" name="featured" value="yes">yes
+                <input  type="radio" name="featured" value="no">no
+            </td>
+        </tr>
+
+        
+        <tr>
+            <td>Active:</td>
+            <td>
+                <input  type="radio" name="active" value="yes">yes
+                <input  type="radio" name="active" value="no">no
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" name="submit" value="Update Content" class="btn-secondary">
+            </td>
+            
+        </tr>
+
+     </table>
+</form>
 
         <?php
 
@@ -81,7 +86,29 @@ include('../b-includes/header.php');
                 $fc_heading=$_POST['fc_heading'];
                 $fc_paragraph=$_POST['fc_paragraph'];
 
-               
+                //2.check wheather the radio buttons are clicked or not
+
+                //Featured
+                if(isset($_POST['featured'])){
+
+                    //save the value in a variable
+                    $featured = $_POST['featured'];
+
+                }else{
+                    $featured = "no";
+                }
+              
+
+                //active
+                if(isset($_POST['active'])){
+
+                    //save the value in a variable
+                    $active = $_POST['active'];
+
+                }else{
+                    $active = "no";
+                }
+
                 //check wheather the image is selected or not
                 if(isset($_FILES['fc_image_name']['name'])){
 
@@ -136,7 +163,9 @@ include('../b-includes/header.php');
                 $sql="INSERT INTO fitness_content SET 
                 fc_heading='$fc_heading',
                 fc_img_name='$fc_image_name',
-                fc_paragraph='$fc_paragraph'
+                fc_paragraph='$fc_paragraph',
+                fc_featured='$featured',
+                fc_active='$active'
                 ";
 
             //3. execute query and data into database
@@ -162,7 +191,7 @@ include('../b-includes/header.php');
            }
         ?>
 
-
+</div>
 <?php
 include('../b-includes/footer.php');
 ?>

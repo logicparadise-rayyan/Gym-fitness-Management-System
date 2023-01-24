@@ -32,7 +32,8 @@ include('../b-includes/header.php');
                         $fc_heading = $row['fc_heading'];
                         $fc_current_image_name = $row['fc_img_name'];
                         $fc_paragraph = $row['fc_paragraph'];
-                       
+                        $fc_featured = $row['fc_featured'];
+                        $fc_active = $row['fc_active'];
 
 
                    }else{
@@ -100,6 +101,23 @@ include('../b-includes/header.php');
 
 
                 <tr>
+                    <td>featured:</td>
+                    <td>
+                        <input <?php if($fc_featured=="yes"){echo "checked";} ?> type="radio" name="fc_featured" value="yes">yes
+                        <input <?php if($fc_featured=="no"){echo "checked";} ?> type="radio" name="fc_featured" value="no">no
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Active:</td>
+                    <td>
+                        <input <?php if($fc_active=="yes"){echo "checked";} ?> type="radio" name="fc_active" value="yes">yes
+                        <input <?php if($fc_active=="no"){echo "checked";} ?> type="radio" name="fc_active" value="no">no
+                    </td>
+                </tr>
+
+                <tr>
                     <td colspan="2">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <input type="hidden" name="$fc_current_img_name" value="<?php echo $fc_current_img_name; ?>">
@@ -120,11 +138,10 @@ include('../b-includes/header.php');
 
          //get the value of all the variables
          $fc_heading = $_POST['fc_heading'];
+         $fc_current_image_name = $_POST['fc_current_image_name'];
          $fc_paragraph = $_POST['fc_paragraph'];
-        
-        
-
-        
+         $fc_featured = $_POST['fc_featured'];
+         $fc_active = $_POST['fc_active'];
         
             //2. check wheather the image is selected or not
             if(isset($_FILES['fc_new_image_name']['name']))
@@ -171,8 +188,6 @@ include('../b-includes/header.php');
                         if($fc_current_image_name!="")
                         {
                             //3. remove current image
-                             //we will get the current img by the variable we passed in manage admin 
-                             $fc_current_image_name = $_GET['fc_current_image_name'];
 
                             //we will give path to image folder
                             $remove_path = "../b-images/fc-images/".$fc_current_image_name;
@@ -218,7 +233,9 @@ include('../b-includes/header.php');
         $sql2 = "UPDATE fitness_content SET 
          fc_heading = '$fc_heading',
          fc_img_name = '$fc_new_image_name',
-         fc_paragraph = '$fc_paragraph'
+         fc_paragraph = '$fc_paragraph',
+         fc_featured = '$fc_featured',
+         fc_active= '$fc_active'
          where id='$id'
          ";
                 

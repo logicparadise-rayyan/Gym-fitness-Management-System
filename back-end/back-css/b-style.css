@@ -290,34 +290,9 @@ input{
 }
 
 /*login page css ends*/
-/*preview for image starts*/
-.image-preview{
-    width: 300px;
-    min-height: 100px;
-    border: 2px solid black;
-    margin-top: 15px;
-    background-color: lightgray;
-
-    /*Default text*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    color: #2A2A2A;
-}
-
-.image-preview__image{
-    display: none;
-    background-color: none;
-    width: 100%;
-}
 
 
 
-
-
-
-/*preview for image starts*/
 /*CSS footer start*/
 .footer{
     background-color:#2A2A2A ;
